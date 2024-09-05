@@ -1,28 +1,40 @@
 package com.example.turistguide.repository;
-
 import com.example.turistguide.model.TouristAttraction;
 import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
-import java.util.List;
 
 @Repository
 public class TouristRepository {
-    private List<TouristAttraction> attractions;
+    ArrayList<TouristAttraction> attractions = new ArrayList<>();
 
     public TouristRepository(){
-        attractions = new ArrayList<>();
+        populateAttractions();
     }
 
-    //TODO opret et par TouristAttraction objekter, som tilføjes til denne ArrayList
+    public void populateAttractions(){
+        attractions.add(new TouristAttraction("Den lille havfrue", "En lille havfrue"));
+        attractions.add(new TouristAttraction("Rundetårn", "Et højt rundt tårn"));
+        attractions.add(new TouristAttraction("Tivoli", "En forlystelsespark"));
+    }
+
+    public ArrayList<TouristAttraction> getAllAttractions(){
+        return attractions;
+    }
+
+    public TouristAttraction findAttractionByName(String name){
+        for (TouristAttraction touristAttraction : attractions){
+            if (touristAttraction.getName().equals(name)){
+                return touristAttraction;
+            }
+        }
+        return null;
+    }
 
     //TODO Klassen skal desuden indeholde CRUD metoder,
     // der arbejder på ovenstående ArrayList. Vent evt med
     // den endelige metodesignatur for CRUD metoderne til I
-    // har set beksrivelsen af Controller klassens endpoints
+    // har set beskrivelsen af Controller klassens endpoints
     // nedenfor.
-
-
 
 
 }
