@@ -3,14 +3,14 @@ package com.example.turistguide.model;
 public class TouristAttraction {
 
     private String name;
-    private String discription;
+    private String description;
 
     public TouristAttraction(){
     }
 
     public TouristAttraction(String name, String discription) {
         this.name = name;
-        this.discription = discription;
+        this.description = discription;
     }
 
     public String getName(){
@@ -22,16 +22,16 @@ public class TouristAttraction {
     }
 
     public String getDiscription(){
-        return discription;
+        return description;
     }
 
     public void setDiscription(String discription){
-        this.discription = discription;
+        this.description = discription;
     }
 
     public String toString(){
         return "Name: "         + name +            "\n" +
-                "Discription: " + discription +     "\n";
+                "Discription: " + description +     "\n";
     }
 
 }

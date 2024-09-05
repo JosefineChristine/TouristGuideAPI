@@ -24,9 +24,13 @@ public class TouristService {
         return touristRepository.findAttractionByName(name);
     }
 
+    public TouristAttraction addAttraction(TouristAttraction touristAttraction){
+        return touristRepository.addAttraction(touristAttraction);
+    }
 
-    //TODO klassen skal indeholde CRUD metoder svarende
-    // til TouristRepository klassen og delegere kald
-    // til relevante metoder i denne.
+
+    //TODO updateAttraction
+
+    //TODO deleteAttraction
 
 }

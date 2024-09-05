@@ -30,11 +30,14 @@ public class TouristRepository {
         return null;
     }
 
-    //TODO Klassen skal desuden indeholde CRUD metoder,
-    // der arbejder på ovenstående ArrayList. Vent evt med
-    // den endelige metodesignatur for CRUD metoderne til I
-    // har set beskrivelsen af Controller klassens endpoints
-    // nedenfor.
+    public TouristAttraction addAttraction(TouristAttraction touristAttraction){
+        getAllAttractions().add(touristAttraction);
+        return touristAttraction;
+    }
+
+    //TODO updateAttraction
+
+    //TODO deleteAttraction
 
 
 }

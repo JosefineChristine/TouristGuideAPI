@@ -31,13 +31,17 @@ public class TouristController {
         return new ResponseEntity<>(touristAttraction, HttpStatus.OK);
     }
 
-//    @PostMapping("/add")
-//    public ResponseEntity<TouristAttraction> addAttraction(@RequestBody TouristAttraction touristAttraction){
-//
-//    }
+    @PostMapping("/add")
+    public ResponseEntity<TouristAttraction> addAttraction(@RequestBody TouristAttraction touristAttraction){
+        TouristAttraction newTouristAttraction = touristService.addAttraction(touristAttraction);
+        return new ResponseEntity<>(newTouristAttraction, HttpStatus.OK);
+    }
 
 
-    //TODO lave CRUD endpoints med funktionalitet der
-    // alle returnerer et ResponseEntity.
+    //TODO updateAttraction
+
+    //TODO deleteAttraction
+
+
 
 }
