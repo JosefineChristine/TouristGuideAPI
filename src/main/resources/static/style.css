@@ -1,0 +1,24 @@
+
+
+header{
+   color: darkred;
+    background-color: bisque;
+    text-align: center;
+}
+
+.image{
+    height: 20%;
+    width: 20%;
+}
+
+footer{
+    background-color: aquamarine;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-title{
+    font-weight: bold;
+}

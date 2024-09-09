@@ -29,9 +29,5 @@ public class TouristAttraction {
         this.description = description;
     }
 
-    public String toString(){
-        return "Name: "         + name +            "\n" +
-                "Description: " + description +     "\n";
-    }
 
 }
