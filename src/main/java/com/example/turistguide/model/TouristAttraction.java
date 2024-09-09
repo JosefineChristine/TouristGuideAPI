@@ -8,9 +8,9 @@ public class TouristAttraction {
     public TouristAttraction(){
     }
 
-    public TouristAttraction(String name, String discription) {
+    public TouristAttraction(String name, String description) {
         this.name = name;
-        this.description = discription;
+        this.description = description;
     }
 
     public String getName(){
@@ -21,17 +21,17 @@ public class TouristAttraction {
         this.name = name;
     }
 
-    public String getDiscription(){
+    public String getDescription(){
         return description;
     }
 
-    public void setDiscription(String discription){
-        this.description = discription;
+    public void setDescription(String description){
+        this.description = description;
     }
 
     public String toString(){
         return "Name: "         + name +            "\n" +
-                "Discription: " + description +     "\n";
+                "Description: " + description +     "\n";
     }
 
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @Service
 public class TouristService {
 
-    private TouristRepository touristRepository;
+    private final TouristRepository touristRepository;
 
     public TouristService(TouristRepository touristRepository){
         this.touristRepository = touristRepository;
@@ -28,9 +28,13 @@ public class TouristService {
         return touristRepository.addAttraction(touristAttraction);
     }
 
+    public TouristAttraction updateAttraction(String searchName, TouristAttraction touristAttraction){
+        return touristRepository.updateAttraction(searchName, touristAttraction);
+    }
 
-    //TODO updateAttraction
+    public void removeAttraction(String seachName){
+        touristRepository.removeAttraction(seachName);
+    }
 
-    //TODO deleteAttraction
 
 }

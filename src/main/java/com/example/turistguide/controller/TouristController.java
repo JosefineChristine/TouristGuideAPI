@@ -34,14 +34,21 @@ public class TouristController {
     @PostMapping("/add")
     public ResponseEntity<TouristAttraction> addAttraction(@RequestBody TouristAttraction touristAttraction){
         TouristAttraction newTouristAttraction = touristService.addAttraction(touristAttraction);
-        return new ResponseEntity<>(newTouristAttraction, HttpStatus.OK);
+        return new ResponseEntity<>(newTouristAttraction, HttpStatus.CREATED);
     }
 
 
-    //TODO updateAttraction
+    @PostMapping ("/update/{searchName}")
+    public ResponseEntity<TouristAttraction> updateAttraction(@PathVariable String searchName, @RequestBody TouristAttraction touristAttraction){
+        TouristAttraction newAttraction = touristService.updateAttraction(searchName, touristAttraction);
+        return new ResponseEntity<>(newAttraction, HttpStatus.OK);
+    }
 
-    //TODO deleteAttraction
 
-
+    @PostMapping ("/delete/{searchName}")
+    public ResponseEntity<HttpStatus> removeAttraction(@PathVariable String searchName){
+        touristService.removeAttraction(searchName);
+        return new ResponseEntity<>(HttpStatus.GONE);
+    }
 
 }
